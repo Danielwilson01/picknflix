@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
 body {
       
-      font: 20px Quicksand, sans-serif;
+      font: 20px Lilita One, cursive;
       line-height: 1.8;
       color: #f5f6f7;
       background-color: darkslategrey;
