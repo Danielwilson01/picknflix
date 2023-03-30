@@ -53,3 +53,17 @@ body {
   .navbar-nav  li a:hover {
       color: #9B287B !important;
   }
+
+  .carousel-item img {
+    width: 120pc;
+    height: 350px;
+    max-height: 350px;
+    margin:auto;
+    display: block;
+   padding-top: 20px;
+    }   
+   .d-block { 
+    height: 350px;
+  
+    }
+
