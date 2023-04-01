@@ -5,9 +5,30 @@ body {
       line-height: 1.8;
       color: #050505; 
       background-color: darkslategrey;
+      
   }
   
-  h1 {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .flex-item-left {
+    flex: 50%;
+  }
+  
+  .flex-item-right {
+    flex: 50%;
+  }
+  
+  
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+      align-self: center;
+    }
+  }
+  h2 {
     color: aqua;
   }
 
@@ -36,27 +57,27 @@ body {
 
 .signup-box {
     width: 360px;
-    height: 620px;
-    margin: auto;
+    height: 690px;
+    align-self: center;
     background-color: white;
     border-radius: 3px;
   }
   
   .login-box {
     width: 360px;
-    height: 280px;
-    margin: auto;
+    height: 340px;
+    
     border-radius: 3px;
     background-color: white;
   }
   
-  h1 {
-    text-align: center;
+  h2 {
+    margin-left: 20px;
     padding-top: 15px;
   }
   
   h4 {
-    text-align: center;
+    margin-left: 20px;
   }
   
   form {
@@ -79,25 +100,14 @@ body {
     outline: none;
   }
   input[type="button"] {
-    width: 320px;
-    height: 35px;
-    margin-top: 20px;
+    width: 300px;
+    height: 38px;
+    margin-top: 18px;
     border: none;
     background-color: #49c1a2;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
   }
-  p {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 15px;
-  }
-  .para-2 {
-    text-align: center;
-    color: white;
-    font-size: 15px;
-    margin-top: -10px;
-  }
-  .para-2 a {
-    color: #49c1a2;
-  }
+footer{
+  margin-left: 20px;
+}
