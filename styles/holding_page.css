@@ -58,15 +58,15 @@ body {
       color: #D39F36;
   }
 
-  .carousel-item img {
-    width: 120pc;
-    height: 350px;
+  .carousel-item.active {
+    background-position: center;
+    background-size: contain;
     max-height: 350px;
     margin: auto;
     display: block;
     padding-top: 20px;
     }   
-   .d-block { 
+  .d-block { 
     height: 350px;
   
     }

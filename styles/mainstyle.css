@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+    font: 20px Lilita One, Cursive;
+    line-height: 1.8;
+    color: #D39F36;
+    background-color: #09090B;
+}
+
+.navbar {
+    
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #B72A33;
+    border: 0;
+    --bs-bg-opacity: 0;
+}
+.bg-body-tertiary {
+    background-color: #B72A33;
+}
+
+.navbar li a {
+    color: #D39F36;
+}
+.navbar-nav  li a:hover {
+    color: #FFFFFF !important;
+}
+
+
+.signup-box {
+    width: auto;
+    height: auto;
+    align-self: center;
+    border-radius: 3px;
+    box-sizing: inherit;
+  }
+
+.login-box {
+    width: auto;
+    height: auto;
+    align-self: center;
+    border-radius: 3px;
+    box-sizing: inherit;
+  }
+
+  .form_group{
+    display: flex;
+    flex-direction: column;
+  }
+  .row{
+    display: inline-flex;
+    padding: 20px;
+    align-self: auto    ;
+    
+  }

@@ -26,14 +26,14 @@ body {
 .split {
   height: 80%;
   width: 50%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 10%;
   bottom: 10%;
   overflow-x: scroll;
   padding-top: 0pc;
 }
-.footer {
+footer {
 bottom: auto;
 justify-content: center;
 }
