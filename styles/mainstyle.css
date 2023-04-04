@@ -53,3 +53,6 @@ body {
     align-self: auto    ;
     
   }
+  .d-block {
+    max-height: 350px;
+  }
