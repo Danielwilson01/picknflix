@@ -58,26 +58,15 @@ body {
       color: #D39F36;
   }
 
-  .bg-img-1 {
-    background-image:url("https://www.odeon.co.uk/media/vzpb0net/twitter-header.jpg");
-}
-
-.bg-img-2 {
-    background-image: url('https://cdnstatic.usheru.com/img/channels/www.cinemaxbantry.ie/slide/dung_1.png');
-}
-
-.bg-img-3 {
-    background-image: url('https://i.redd.it/vx1kqm3nbky91.png');
-}
-
-.bg-img-4 {
-    background-image: url('https://weliveentertainment.com/wp-content/uploads/2023/03/65-banner.jpg');
-}
-
-.carousel-image {
-    background-position:center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 60vh;
-
-}
+  .carousel-item img {
+    width: 120pc;
+    height: 350px;
+    max-height: 350px;
+    margin: auto;
+    display: block;
+    padding-top: 20px;
+    }   
+   .d-block { 
+    height: 350px;
+  
+    }
