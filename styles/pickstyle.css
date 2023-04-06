@@ -44,3 +44,7 @@ body {
   .navbar-nav  li a:hover {
       color: #9B287B !important;
   }
+
+  input{
+    display: inline-block;
+  }
