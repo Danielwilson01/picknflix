@@ -15,6 +15,7 @@ body {
     border: 0;
     --bs-bg-opacity: 0;
 }
+
 .bg-body-tertiary {
     background-color: #B72A33;
 }
@@ -155,3 +156,5 @@ img=
   .img__wrap:hover .img__description {
     transform: translateY(0);
   }
+
+  
