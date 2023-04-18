@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+    font: 20px Lilita One, Cursive;
+    line-height: 1.8;
+    color: #D39F36;
+    background-color: #09090B;
+}
+
+.navbar {
+    
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: #B72A33;
+    border: 0;
+    --bs-bg-opacity: 0;
+}
+
+.bg-body-tertiary {
+    background-color: #B72A33;
+}
+
+.navbar li a {
+    color: #D39F36;
+}
+.navbar-nav  li a:hover {
+    color: #FFFFFF !important;
+}
+
+
+.signup-box {
+    width: auto;
+    height: auto;
+    align-self: center;
+    border-radius: 3px;
+    box-sizing: inherit;
+  }
+
+.login-box {
+    width: auto;
+    height: auto;
+    align-self: center;
+    border-radius: 3px;
+    box-sizing: inherit;
+  }
+
+  .form_group{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row{
+    display: inline-flex;
+    padding: 20px;
+    align-self: auto    ;
+    
+  }
+  .d-block {
+    max-height: 350px;
+  }
+
+  #action{
+    
+    flex:25%;
+    height: 250;
+    max-height: 250;
+    width: 350;
+    max-width: 350;
+    padding-left: 20px;
+  }
+
+  #action:hover{
+opacity: 0.5;
+img=
+
+  }
+
+  .column{
+     flex: 0 0 auto;
+    max-width: 20%;
+    padding: 1px 4px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+    Responsive layout - makes the two columns stack on top of each other instead of next to each other
+  @media screen and (max-width: 600px) {
+    .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+
+
+
+  .form-entry{
+    display: inline-flex;  
+    flex: 0 0 auto;
+    max-width: 800px;
+    align-self: center;
+  }
+
+
+  .img_insert{
+    flex: 0 0 auto;
+    padding: 0 4px;
+   max-height: 100%;
+  
+  }
+
+
+  .img__wrap {
+    position: relative;
+    max-height: 100%;
+  
+  }
+
+  .img_insert img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    max-height: 100%;
+  }
+  
+  .img__description_layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+      background: rgba(36, 62, 206, 0.6);
+    color: #ffee00;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+     transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap:hover .img__description_layer {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .img__description {
+    transition: .2s;
+    transform: translateY(1em);
+  }
+  
+  .img__wrap:hover .img__description {
+    transform: translateY(0);
+  }
+
+  
