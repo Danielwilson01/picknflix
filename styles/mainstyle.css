@@ -85,6 +85,7 @@ img=
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    height: 100%;
   }
   
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other
@@ -104,18 +105,10 @@ img=
     align-self: center;
   }
 
-
-  .img_insert{
-    flex: 0 0 auto;
-    padding: 0 4px;
-   max-height: 100%;
-  
-  }
-
-
   .img__wrap {
     position: relative;
     max-height: 100%;
+    width: 350px;
   
   }
 
@@ -132,13 +125,15 @@ img=
     bottom: 0;
     left: 0;
     right: 0;
-      background: rgba(36, 62, 206, 0.6);
+    background: rgba(36, 62, 206, 0.6);
     color: #ffee00;
     visibility: hidden;
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: inherit;
+    height: inherit;
   
      transition: opacity .2s, visibility .2s;
   }

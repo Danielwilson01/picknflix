@@ -22,6 +22,7 @@ body {
 
 .navbar li a {
     color: #D39F36;
+    text-shadow: #09090B 0px 0px 2px;
 }
 .navbar-nav  li a:hover {
     color: #FFFFFF !important;
@@ -49,52 +50,10 @@ body {
     flex-direction: column;
   }
   
-  .row{
-    display: inline-flex;
-    padding: 20px;
-    align-self: auto    ;
-    
-  }
+
   .d-block {
     max-height: 350px;
   }
-
-  #action{
-    
-    flex:25%;
-    height: 250;
-    max-height: 250;
-    width: 350;
-    max-width: 350;
-    padding-left: 20px;
-  }
-
-  #action:hover{
-opacity: 0.5;
-img=
-
-  }
-
-  .column{
-     flex: 0 0 auto;
-    max-width: 20%;
-    padding: 1px 4px;
-  }
-
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  
-    Responsive layout - makes the two columns stack on top of each other instead of next to each other
-  @media screen and (max-width: 600px) {
-    .column {
-      -ms-flex: 100%;
-      flex: 100%;
-      max-width: 100%;
-    }
-
 
 
   .form-entry{
@@ -104,41 +63,45 @@ img=
     align-self: center;
   }
 
-
-  .img_insert{
-    flex: 0 0 auto;
-    padding: 0 4px;
-   max-height: 100%;
-  
+  .row{
+    display: inline-flex;
+    padding: 20px;
   }
 
+.columns{
+  align-self: center;
+ }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+
+  }
 
   .img__wrap {
     position: relative;
     max-height: 100%;
+    max-width: 100%;
   
   }
-
-  .img_insert img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-    max-height: 100%;
-  }
-  
   .img__description_layer {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-      background: rgba(36, 62, 206, 0.6);
+    border-radius: 30px;
+    background: rgba(248, 9, 29, 0.6);
     color: #ffee00;
+    font-size: xx-large;
+    text-shadow: black 0px 0px 2px;
     visibility: hidden;
     opacity: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+
   
      transition: opacity .2s, visibility .2s;
   }
