@@ -6,10 +6,21 @@ body {
     line-height: 1.8;
     color: #D39F36;
     background-color: #09090B;
+    padding: 30px;
+}
+
+footer {
+  font: 18px Lilita One, Cursive;
+  line-height: 1.8;
+  color: #D39F36;
+  background-color: #B72A33;
+}
+
+.navbar-nav1 {
+  align-items: center;
 }
 
 .navbar {
-    
     font-size: 12px;
     letter-spacing: 5px;
     background-color: #B72A33;
@@ -29,6 +40,9 @@ body {
     color: #FFFFFF !important;
 }
 
+h1 {
+  text-align: center;
+}
 
 .signup-box {
     width: auto;
@@ -55,8 +69,8 @@ body {
     display: inline-flex;
     padding: 20px;
     align-self: auto    ;
-    
   }
+
   .d-block {
     max-height: 350px;
   }
@@ -74,7 +88,6 @@ body {
   #action:hover{
 opacity: 0.5;
 img=
-
   }
 
   .column{
@@ -98,8 +111,6 @@ img=
       max-width: 100%;
     } */
 
-
-
   .form-entry{
     display: inline-flex;  
     flex: 0 0 auto;
@@ -111,7 +122,6 @@ img=
     position: relative;
     max-height: 100%;
     width: 350px;
-  
   }
 
   .img_insert img {
@@ -137,7 +147,7 @@ img=
     width: inherit;
     height: inherit;
   
-     transition: opacity .2s, visibility .2s;
+    transition: opacity .2s, visibility .2s;
   }
   
   .img__wrap:hover .img__description_layer {

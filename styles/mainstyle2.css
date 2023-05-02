@@ -7,8 +7,15 @@ body {
     background-color: #09090B;
 }
 
+footer {
+  font: 20px Lilita One, Cursive;
+  line-height: 1.8;
+  color: #D39F36;
+  background-color: #09090B;
+}
+
 .navbar {
-    
+
     font-size: 12px;
     letter-spacing: 5px;
     background-color: #B72A33;
