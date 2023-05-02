@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link href= "styles/holding_page.css" rel="stylesheet" type="text/css" />
-    <link href= "styles/mainstyle.css" rel="stylesheet" type="text/css" />
+    <link href= "../static/styles/mainstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h1>Coming Soon</h1>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid navbar">
           <a class="navbar-brand" href="./index.html">Pick'N'Flix</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,10 +19,13 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                <a class="nav-link" aria-current="page" href="./home.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./signup.html">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./info.html">About Us</a>
@@ -40,12 +42,67 @@
         </div>
       </nav>
 
+
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/images/john_wick.jpeg" class="d-block w-100" alt="john_wick">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/dungeons2.jpg" class="d-block w-100" alt="dungeons">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/shazam.jpeg" class="d-block w-100" alt="shazam2">
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/65.jpg" class="d-block w-100" alt="65">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <div class="container-fluid bg-1 text-center">
+      <a href="index.html"><img src="../static/images/pic_n_mix.png"  alt="logo" width="250"></a>
+      <h1>Welcome to Pick'N'Fix!</h1>
+      <h2>Your 1-Stop-Shop for all Cinema Listings, Movie Reviews and Recommendations!</h2>
+    </div>
+    <br>
+
+    <div class="container-fluid bg-3 text-center">
+      <h3>Know what you want to watch, but not where to see it?</h3>
+      <h3>Our site will find all the local listings in your area!</h3>
+      <img src="../static/images/Chickens_movies.jpg" alt="Chickens_movies" width="250">
+    </div>
+      
+    <div class="container-fluid bg-2 text-center">
+      <h4>Need Inspiration? Tell us a Genre you fancy and our Movie Generator will suggest a film to watch!</h4>
+      <img src="../static/images/chick1.jpg" alt="chick1" width="250">
+    </div>
+
+    <div class="container-fluid bg-4 text-center">
+      <h4>Want to check out Reviews of the latest Movies?</h4>
+      <h4> We have you covered! </h4>
+      <img src="../static/images/chick2jpg.jpg" alt="chick2" width="250">
+    </div>
+
       <div class="container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <lr>
               <li class="nav-item"><a href="home.html" class="nav-link px-2 text-body-secondary">Home</a></li>
               <li class="nav-item"><a href="signup.html" class="nav-link px-2 text-body-secondary">Sign up</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="./login.html">Login</a>
+              </li>
             </lr>
             <lr>
               <li class="nav-item"><a href="RECOMMENDATIONS2.html" class="nav-link px-2 text-body-secondary">Recommendations</a></li>
@@ -67,6 +124,8 @@
         </footer>
       </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>   
   </body>
+
 </html>

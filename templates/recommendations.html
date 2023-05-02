@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link href= "styles/mainstyle2.css" rel="stylesheet" type="text/css" />
+    <link href= "../static/styles/mainstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h1>Coming Soon</h1>
@@ -28,7 +28,7 @@
                 <a class="nav-link" href="./info.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="RECOMMENDATIONS2.html">Recommendations</a>
+                <a class="nav-link" href="recommendations.html">Recommendations</a>
               </li>
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -41,7 +41,7 @@
 
 
     <div class="container-fluid bg-1 text-center">
-      <a href="index.html"><img src="images/pic_n_mix.png"  alt="logo" width="250"></a>
+      <a href="index.html"><img src="../static/images/pic_n_mix.png"  alt="logo" width="250"></a>
       <h1>Movie Recommendations</h1>
     </div>
 
@@ -49,63 +49,66 @@
       <h4>Need Inspiration? Tell us a Genre you fancy and our Movie Generator will suggest a film to watch!</h4>
     </div>
 
-<!-- replaced the - with = -->
-  <div class="container-fluid bg-1 text-center padding=20px">
-    <div class="row">
-      <div class="img__wrap col-sm-4 columns">
-        <img class="image" src="images/comedy.jpg" alt="Comedy movies"/>
-        <div class="img__description_layer">
-          <p class="img__description">Comedy</p>
-        </div>
-      </div>
 
-      <div class="img__wrap col-sm-4">
-        <img class="image" src="images/action.jpeg" alt="Action movies"/>
-        <div class="img__description_layer">
-          <p class="img__description">Action</p>
-        </div>
-      </div>
-
-      <div class="img__wrap col-sm-4">
-        <img class="image" src="images/horror.jpg" alt="horror movies"/>
-        <div class="img__description_layer">
-          <p class="img__description">Horror</p>
-        </div>
-      </div>
-    </div>
+  <div class="row">
+    <span class="column">
+      <img src="../static/images/action.jpeg"  alt="action movies" width="250" id="action">
+    </span>
+    <span class="column">
+      <img src="../static/images/romance.jpeg"  alt="romance movies" width="250" id="action">
+    </span>
+    <span class="column">
+      <img src="../static/images/heroes.jpg"  alt="hero movies" width="250" id="action">
+    </span>
+    <span class="column">
+      <img src="../static/images/horror.jpg"  alt="horror movies" width="250" id="action">
+    </span>
+    <span class="column">
+      <img src="../static/images/comedy.jpg"  alt="comedy movies" width="250" id="action">
+    </span>
   </div>
 
-  <div class="container-fluid bg-1 text-center padding=20px">
-    <div class="row">
-      <div class="img__wrap col-sm-4">
-        <img class="image" src="images/heroes.jpg" alt="hero movies"/>
-        <div class="img__description_layer">
-          <p class="img__description">Super Heroes</p>
-        </div>
+  <div class="row">
+    <span class="img__wrap col-sm-2">
+      <img class="img-fluid" src="../static/images/comedy.jpg"/>
+      <div class="img__description_layer">
+        <p class="img__description">Comedy</p>
       </div>
+    </span>
 
-      <div class="img__wrap col-sm-4">
-        <img class="image" src="images/romance.jpeg" alt="romance movies"/>
-        <div class="img__description_layer">
-          <p class="img__description">Romance</p>
-        </div>
+    <span class="img__wrap col-sm-2">
+      <img class="img-fluid" src="../static/images/action.jpeg"/>
+      <div class="img__description_layer">
+        <p class="img__description">Action</p>
       </div>
+    </span>
 
-      <div class="img__wrap col-sm-4">
-        <img class="image" src="images/question.jpg" alt="Question marks"/>
-        <div class="img__description_layer">
-          <p class="img__description">Random</p>
-        </div>
+    <span class="img__wrap col-sm-2">
+      <img class="img-fluid img_insert img" src="../static/images/horror.jpg"/>
+      <div class="img__description_layer">
+        <p class="img__description">Horror</p>
       </div>
-    </div>
+    </span>
+
+    <span class="img__wrap col-sm-2">
+      <img class="img-fluid" src="../static/images/heroes.jpg"/>
+      <div class="img__description_layer">
+        <p class="img__description">Super Heroes</p>
+      </div>
+    </span>
+
+    <span class="img__wrap col-sm-2">
+      <img class="img-fluid" src="../static/images/romance.jpeg"/>
+      <div class="img__description_layer">
+        <p class="img__description">Romance</p>
+      </div>
+    </span>
   </div>
 
-  <div class="container-fluid bg-1 text-center padding=20px">
-    <form class="input" method="SEARCH">
-      <input class="form-control form-entry" type="search" placeholder="Please input a Genre: Horror/Romance/Action/Heroes/Random" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
+  <form class="input" method="SEARCH">
+  <input class="form-control form-entry" type="search" placeholder="Please input a Genre: Horror/Romance/Action/Heroes/Random" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
 
   <div class="container">
     <footer class="py-3 my-4">
