@@ -7,7 +7,7 @@ db=mysql.connector.connect(
     user="root",
     password="password",
     database="picknflix"
- )
+)
 
 cursor=db.cursor()
 

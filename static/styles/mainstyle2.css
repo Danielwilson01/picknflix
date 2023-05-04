@@ -50,6 +50,11 @@ body {
     flex-direction: column;
   }
   
+    .row{
+    display: inline-flex;
+    padding: 20px;
+    align-self: auto    ;
+  }
 
   .d-block {
     max-height: 350px;
@@ -63,14 +68,15 @@ body {
     align-self: center;
   }
 
-  .row{
-    display: inline-flex;
-    padding: 20px;
-  }
 
-.columns{
+  .column{
+     flex: 0 0 auto;
+    max-width: 20%;
+    padding: 1px 4px;
+  }
+/* .columns{
   align-self: center;
- }
+ } */
 
   .image {
     height: 100%;
