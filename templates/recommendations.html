@@ -5,44 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainstyle2.css') }}">
+    <link href= "../static/styles/mainstyle2.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
     <h1>Coming Soon</h1>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid navbar">
-          <a class="navbar-brand" href="./index.html">Pick'N'Flix</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./home.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./signup.html">Sign Up</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./info.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="RECOMMENDATIONS2.html">Recommendations</a>
-              </li>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            </ul>
-          </div>
+      <div class="container-fluid navbar">
+        <a class="navbar-brand" href="./index.html">Pick'N'Flix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./signup.html">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./info.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recommendations.html">Recommendations</a>
+            </li>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </ul>
         </div>
-      </nav>
-
+      </div>
+    </nav>
 
     <div class="container-fluid bg-1 text-center">
-      <a href="index.html"><img src="static/pic_n_mix.png"  alt="logo" width="250"></a>
+      <a href="index.html"><img src="../static/images/pic_n_mix.png"  alt="logo" width="250"></a>
       <h1>Movie Recommendations</h1>
     </div>
 
@@ -54,21 +56,21 @@
   <div class="container-fluid bg-1 text-center padding=20px">
     <div class="row">
       <div class="img__wrap col-sm-4 columns">
-        <img class="image" src="static//comedy3.jpg" alt-"Comedy movies"/>
+        <img class="image" src="../static/images/comedy3.jpg" alt-"Comedy movies"/>
             <div class="img__description_layer">
                 <a class="linky" href="/Comedy"> <p class="img__description results"> Comedy</p></a>
             </div>
       </div>
 
       <div class="img__wrap col-sm-4">
-        <img class="image" src="static/action.jpeg" alt="Action movies"/>
+        <img class="image" src="../static/images/action.jpeg" alt="Action movies"/>
         <div class="img__description_layer">
             <a class="linky" href="/Action"> <p class="img__description results"> Action</p></a>
         </div>
       </div>
 
       <div class="img__wrap col-sm-4">
-        <img class="image" src="static/horror2.jpg" alt="horror movies"/>
+        <img class="image" src="../static/images/horror2.jpg" alt="horror movies"/>
         <div class="img__description_layer">
             <a class="linky" href="/Horror"> <p class="img__description results"> Horror</p></a>
         </div>
@@ -79,7 +81,7 @@
   <div class="container-fluid bg-1 text-center padding=20px">
     <div class="row">
       <div class="img__wrap col-sm-4">
-        <img class="image" src="static/heroes2.jpg" alt="hero movies"/>
+        <img class="image" src="../static/images/heroes2.jpg" alt="hero movies"/>
         <div class="img__description_layer">
             <a class="linky" href="/Heroes"> <p class="img__description results"> Super Heroes</p></a>
 
@@ -87,14 +89,14 @@
       </div>
 
       <div class="img__wrap col-sm-4">
-        <img class="image" src="static/romance2.jpeg" alt="romance movies"/>
+        <img class="image" src="../static/images/romance2.jpeg" alt="romance movies"/>
         <div class="img__description_layer">
             <a class="linky" href="/Romance"> <p class="img__description results"> Romance </p></a>        
         </div>
       </div>
 
       <div class="img__wrap col-sm-4">
-        <img class="image" src="static/question.jpg" alt="Question marks"/>
+        <img class="image" src="../static/images/question.jpg" alt="Question marks"/>
         <div class="img__description_layer">
             <a class="linky" href="/Random"> <p class="img__description results"> Random </p></a>
         </div>
@@ -102,24 +104,6 @@
     </div>
   </div>
 
-  <!-- <center>
-    <table>
-        {% for Genre in lists %}
-        <tr>
-            <td> <a href="/random/{{Genre[0]}}"> {{Genre[0]}} </a></td>
-        </tr>
-    
-    {% endfor %}
-    </table> -->
-    
-    <!-- </center>
-
-  <div class="container-fluid bg-1 text-center padding=20px">
-    <form class="input" method="SEARCH">
-      <input class="form-control form-entry" type="search" placeholder="Please input a Genre: Horror/Romance/Action/Heroes/Random" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div> -->
 
 <br>
 <br>
@@ -128,9 +112,35 @@
 <br>
   
 
-  <footer>
-      <p>&copy; 2023 Created by Bandwidth of Brothers!!</p>
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <lr>
+        <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="signup.html" class="nav-link px-2 text-body-secondary">Sign up</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">Login</a>
+        </li>
+      </lr>
+      <lr>
+        <li class="nav-item"><a href="recommendations.html" class="nav-link px-2 text-body-secondary">Recommendations</a></li>
+      </lr>
+      <lr>
+        <li class="nav-item"><a href="partners.html" class="nav-link px-2 text-body-secondary">Our Partners</a></li>
+        <li class="nav-item"><a href="info.html" class="nav-link px-2 text-body-secondary">About</a></li>
+      </lr>
+      <lr>
+        <li class="nav-item"><a href="terms.html" class="nav-link px-2 text-body-secondary">Terms & conditions</a></li>
+        <li class="nav-item"><a href="faqs.html" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      </lr>
+      <lr>
+        <li class="nav-item"><a href="cookies.html" class="nav-link px-2 text-body-secondary">Manage Cookies</a></li>
+        <li class="nav-item"><a href="privacypolicy.html" class="nav-link px-2 text-body-secondary">Privacy Policy</a></li>
+      </lr>
+    </ul>
+    <p class="text-center text-body-secondary">&copy; 2023 Created by Bandwidth of Brothers!!</p>
   </footer>
+</div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
