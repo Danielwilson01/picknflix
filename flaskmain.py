@@ -88,22 +88,19 @@ def saverecord():
     db.commit()
     return redirect(url_for('Home_Page'))
 
+@app.route("/filmshowings")
+def listfilms():
+    findshowings="select * from film"
+    cursor.execute(findshowings)
+    showings=cursor.fetchall()
+    return render_template("showtimes.html", show=showings)
 
-# @app.route("/random/<gname>")
-# def recommendedgenre(gname):
-#     selectQuery="select * from recommendations where Genre='"+gname+"'"
-#     cursor.execute(selectQuery)
-#     list=cursor.fetchall()
-#     selectrandom="select * from recommendations where Genre='"+gname+"' order by RAND() limit 1"
-#     cursor.execute(selectrandom)
-#     randomlist=cursor.fetchall()
-#     return render_template("random.html", genre=gname, film=randomlist)
+@app.route("/filmshowings/<fname>")
+def findshowings(fname):
+    findshowings="select * from event where '"+fname+"'"
+    cursor.execute(findshowings)
+    showings=cursor.fetchall()
+    return render_template("showtimes.html", show=showings, film=fname)
 
-
-# @app.route("/deleteEmployee/<empno1>/<dname1>")
-# def deleteEmployee(empno1,dname1):
-#     cursor.execute("delete from recommendations where empno="+empno1)
-#     db.commit()
-#     return redirect(url_for('departmentEmployees',dname=dname1))
 
 app.run(debug=True)   
