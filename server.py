@@ -1,0 +1,92 @@
+from flask import Flask, render_template,request,redirect,url_for
+import mysql.connector
+app=Flask(__name__)
+
+db=mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="password",
+    database="movies"
+)
+
+cursor=db.cursor()
+
+@app.route("/")
+def Home_Page():
+    cursor.execute("select distinct Genre from recommendations")
+    listGenres=cursor.fetchall()
+    return render_template("recommendations.html", lists=listGenres)
+
+
+@app.route("/Random")
+def randomfilm():
+    selectrandom="select * from recommendations order by RAND() limit 1"
+    cursor.execute(selectrandom)
+    randomlist=cursor.fetchall()
+    return render_template("random.html", film=randomlist)
+
+
+@app.route("/Comedy")
+def randomcomedy():
+    selectQuery="select * from recommendations where Genre='Comedy' order by RAND() limit 1"
+    cursor.execute(selectQuery)
+    comedylist=cursor.fetchall()
+    return render_template("comedy.html", film=comedylist)
+
+@app.route("/Action")
+def randomaction():
+    selectQuery="select * from recommendations where Genre='Action' order by RAND() limit 1"
+    cursor.execute(selectQuery)
+    actionlist=cursor.fetchall()
+    return render_template("action.html", film=actionlist)
+
+@app.route("/Romance")
+def randomromance():
+    selectQuery="select * from recommendations where Genre='Romance' order by RAND() limit 1"
+    cursor.execute(selectQuery)
+    romlist=cursor.fetchall()
+    return render_template("romance.html", film=romlist)
+    
+@app.route("/Horror")
+def randomhorror():
+    selectQuery="select * from recommendations where Genre='Horror' order by RAND() limit 1"
+    cursor.execute(selectQuery)
+    horrorlist=cursor.fetchall()
+    return render_template("horror.html", film=horrorlist)
+
+@app.route("/Heroes")
+def randomheroes():
+    selectQuery="select * from recommendations where Genre='Heroes' order by RAND() limit 1"
+    cursor.execute(selectQuery)
+    herolist=cursor.fetchall()
+    return render_template("heroes.html", film=herolist)
+
+@app.route("/newfilm")
+def newRecord():
+    return render_template("newfilm.html")
+
+@app.route("/saverecord",methods=["POST"])
+def saverecord():
+    cursor.execute("insert into recommendations values('"+ request.form['genrename']+"','"+request.form['filmname']+"')")
+    db.commit()
+    return redirect(url_for('Home_Page'))
+
+
+# @app.route("/random/<gname>")
+# def recommendedgenre(gname):
+#     selectQuery="select * from recommendations where Genre='"+gname+"'"
+#     cursor.execute(selectQuery)
+#     list=cursor.fetchall()
+#     selectrandom="select * from recommendations where Genre='"+gname+"' order by RAND() limit 1"
+#     cursor.execute(selectrandom)
+#     randomlist=cursor.fetchall()
+#     return render_template("random.html", genre=gname, film=randomlist)
+
+
+# @app.route("/deleteEmployee/<empno1>/<dname1>")
+# def deleteEmployee(empno1,dname1):
+#     cursor.execute("delete from recommendations where empno="+empno1)
+#     db.commit()
+#     return redirect(url_for('departmentEmployees',dname=dname1))
+
+app.run(debug=True)   
