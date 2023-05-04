@@ -6,8 +6,8 @@ db=mysql.connector.connect(
     host="localhost",
     user="root",
     password="password",
-    database="movies"
-)
+    database="picknflix"
+ )
 
 cursor=db.cursor()
 
