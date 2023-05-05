@@ -30,9 +30,7 @@ def aboutus():
 
 @app.route("/Recommendations")
 def recommendations():
-    cursor.execute("select distinct Genre from recommendations")
-    listGenres=cursor.fetchall()
-    return render_template("recommendations.html", lists=listGenres)
+    return render_template("recommendations.html")
 
 
 @app.route("/Recommendations/Random")
