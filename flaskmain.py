@@ -35,48 +35,20 @@ def recommendations():
     return render_template("recommendations.html", lists=listGenres)
 
 
-@app.route("/Random")
+@app.route("/Recommendations/Random")
 def randomfilm():
     selectrandom="select * from recommendations order by RAND() limit 1"
     cursor.execute(selectrandom)
     randomlist=cursor.fetchall()
-    return render_template("random.html", film=randomlist)
+    return render_template("genre.html", film=randomlist)
 
 
 @app.route("/Recommendations/<genre>")
-def randomcomedy(genre):
+def randomgenre(genre):
     selectQuery="select * from recommendations where Genre= '"+genre+"' order by RAND() limit 1"
     cursor.execute(selectQuery)
-    comedylist=cursor.fetchall()
-    return render_template("genre.html", film=comedylist, gname=genre)
-
-@app.route("/Action")
-def randomaction():
-    selectQuery="select * from recommendations where Genre='Action' order by RAND() limit 1"
-    cursor.execute(selectQuery)
-    actionlist=cursor.fetchall()
-    return render_template("action.html", film=actionlist)
-
-@app.route("/Romance")
-def randomromance():
-    selectQuery="select * from recommendations where Genre='Romance' order by RAND() limit 1"
-    cursor.execute(selectQuery)
-    romlist=cursor.fetchall()
-    return render_template("romance.html", film=romlist)
-    
-@app.route("/Horror")
-def randomhorror():
-    selectQuery="select * from recommendations where Genre='Horror' order by RAND() limit 1"
-    cursor.execute(selectQuery)
-    horrorlist=cursor.fetchall()
-    return render_template("horror.html", film=horrorlist)
-
-@app.route("/Heroes")
-def randomheroes():
-    selectQuery="select * from recommendations where Genre='Heroes' order by RAND() limit 1"
-    cursor.execute(selectQuery)
-    herolist=cursor.fetchall()
-    return render_template("heroes.html", film=herolist)
+    filmlist=cursor.fetchall()
+    return render_template("genre.html", film=filmlist, gname=genre)
 
 @app.route("/newfilm")
 def newRecord():
