@@ -70,7 +70,8 @@ def findshowings(fname):
     findshowings="select event.Date, event.Time from filmevent join event on filmevent.Eventid = event.id WHERE filmevent.filmid = (SELECT film.id FROM film WHERE film.Film = %s)"
     cursor.execute(findshowings, (fname,))
     showings=cursor.fetchall()
-    return render_template("showtimes.html", time=showings )
+    
+    return render_template("showtimes.html", time=showings)
 
 @app.route("/Filmshowings/<fname>/<cname>")
 def findvenue(fname, cname):
