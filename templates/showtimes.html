@@ -58,11 +58,22 @@
         {% for shows in show %}
         <tr>
             <td> <a href="/filmshowings/{{shows[1]}}"> {{shows[1]}} </a></td>
+            
         </tr>
         
     {% endfor %}
     </table>
 
+    <table>
+    
+      {% for time in time %}
+      <tr>
+          <td> <a href="/filmshowings/{{time[1]}}"> {{time[1]}} </a></td>
+          <td> <a href="/filmshowings/{{time[0]}}"> {{time[0]}} </a></td>
+      </tr>
+      
+  {% endfor %}
+  </table>
   <a href="/"> Home </a>
 </center>
 
