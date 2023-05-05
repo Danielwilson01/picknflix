@@ -43,12 +43,12 @@ def randomfilm():
     return render_template("random.html", film=randomlist)
 
 
-@app.route("/Comedy")
-def randomcomedy():
-    selectQuery="select * from recommendations where Genre='Comedy' order by RAND() limit 1"
+@app.route("/Recommendations/<genre>")
+def randomcomedy(genre):
+    selectQuery="select * from recommendations where Genre= '"+genre+"' order by RAND() limit 1"
     cursor.execute(selectQuery)
     comedylist=cursor.fetchall()
-    return render_template("comedy.html", film=comedylist)
+    return render_template("genre.html", film=comedylist, gname=genre)
 
 @app.route("/Action")
 def randomaction():
