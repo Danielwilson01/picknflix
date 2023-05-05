@@ -16,19 +16,19 @@ cursor=db.cursor()
 def Home_Page():
     return render_template("home.html")
 
-@app.route("/signup.html")
+@app.route("/Signup")
 def signup():
     return render_template("signup.html")
 
-@app.route("/login.html")
+@app.route("/Login")
 def login():
     return render_template("login.html")    
 
-@app.route("/info.html")
+@app.route("/Aboutus")
 def aboutus():
     return render_template("info.html")
 
-@app.route("/recommendations.html")
+@app.route("/Recommendations")
 def recommendations():
     cursor.execute("select distinct Genre from recommendations")
     listGenres=cursor.fetchall()
@@ -88,19 +88,27 @@ def saverecord():
     db.commit()
     return redirect(url_for('Home_Page'))
 
-@app.route("/filmshowings")
+@app.route("/Filmshowings")
 def listfilms():
     findshowings="select * from film"
     cursor.execute(findshowings)
     showings=cursor.fetchall()
     return render_template("showtimes.html", show=showings)
 
-@app.route("/filmshowings/<fname>")
+@app.route("/Filmshowings/<fname>")
 def findshowings(fname):
     findshowings="select event.Date, event.Time from filmevent join event on filmevent.Eventid = event.id WHERE filmevent.filmid = (SELECT film.id FROM film WHERE film.Film = %s)"
     cursor.execute(findshowings, (fname,))
     showings=cursor.fetchall()
     return render_template("showtimes.html", time=showings )
+
+@app.route("/Filmshowings/<fname>/<cname>")
+def findvenue(fname, cname):
+    findvenue="select cinema.cinemaname from filmcinema join cinema on filmcinema.cinemaid=cinema.id where filmcinema.filmid = (select film.id from film where film.film =  %s)"
+    cursor.execute(findvenue, (fname, cname))
+    venue=cursor.fetchall()
+    return render_template("showtimes.html", location=venue )
+
 
 
 app.run(debug=True)   
