@@ -16,23 +16,21 @@ cursor=db.cursor()
 def Home_Page():
     return render_template("home.html")
 
-@app.route("/signup.html")
+@app.route("/Signup")
 def signup():
     return render_template("signup.html")
 
-@app.route("/login.html")
+@app.route("/Login")
 def login():
     return render_template("login.html")    
 
-@app.route("/info.html")
+@app.route("/Aboutus")
 def aboutus():
     return render_template("info.html")
 
-@app.route("/recommendations.html")
+@app.route("/Recommendations")
 def recommendations():
-    cursor.execute("select distinct Genre from recommendations")
-    listGenres=cursor.fetchall()
-    return render_template("recommendations.html", lists=listGenres)
+    return render_template("recommendations.html")
 
 
 @app.route("/Recommendations/Random")
