@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link href= "../static/styles/mainstyle2.css" rel="stylesheet" type="text/css" />
+    <link href= "../../static/styles/mainstyle2.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -13,7 +13,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid navbar">
-        <a class="navbar-brand" href="./index.html">Pick'N'Flix</a>
+        <a class="navbar-brand" href="../../index.html">Pick'N'Flix</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,7 +47,7 @@
     </nav>
 
     <div class="container-fluid bg-1 text-center">
-      <a href="index.html"><img src="../static/images/pic_n_mix.png"  alt="logo" width="250"></a>
+      <a href="index.html"><img src="../../static/images/pic_n_mix.png"  alt="logo" width="250"></a>
       <h1>Movie Showtimes</h1>
     </div>
 
@@ -58,34 +58,35 @@
     <center>
     <table>
     
-        {% for shows in show %}
+{% for shows in show %}
         <tr>
-            <td> <a href="/Filmshowings/{{shows[1]}}"> {{shows[1]}} </a></td>
+            <td> <a href="/Filmshowings/{{shows[0]}}"> {{shows[1]}} </a></td>
             
         </tr>
         
-    {% endfor %}
+        {% endfor %}
     </table>
 
     <table>
     
-      {% for time in time %}
+{% for time in time%}
       <tr>
-          <td> <a href="/Filmshowings/{{time[1]}}">  {{time[1]}} {{time[0]}} </a></td>
+          <td> <a href="/Filmshowings/{{fname}}/{{time[0]}}">  {{time[1]}} {{time[2]}} </a></td>
       </tr>
       
-  {% endfor %}
+      {% endfor %}
   </table>
 
   <table>
     
-    {% for venue in location %}
+{% for venue in location %}
     <tr>
-        <td> <a href="/Filmshowings/{{venue[1]}}"> {{venue [1]}} </a></td>
+        <td>  {{venue[0]}} </td>
     </tr>
     
-{% endfor %}
+      {% endfor %}
 </table>
+
 
 <button onclick="history.back()">Go Back</button>
 </center>

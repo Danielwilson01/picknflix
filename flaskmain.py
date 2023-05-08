@@ -11,6 +11,7 @@ db=mysql.connector.connect(
 
 cursor=db.cursor()
 
+i=0
 
 @app.route("/")
 def Home_Page():
@@ -67,18 +68,17 @@ def listfilms():
 
 @app.route("/Filmshowings/<fname>")
 def findshowings(fname):
-    findshowings="select event.Date, event.Time from filmevent join event on filmevent.Eventid = event.id WHERE filmevent.filmid = (SELECT film.id FROM film WHERE film.Film = %s)"
+    findshowings="select event.id, event.Date, event.Time from filmevent join event on filmevent.Eventid = event.id WHERE filmevent.filmid = %s"
     cursor.execute(findshowings, (fname,))
-    showings=cursor.fetchall()
-    
-    return render_template("showtimes.html", time=showings)
+    time=cursor.fetchall()
+    return render_template("showtimes.html", time=time, fname=fname)
 
-@app.route("/Filmshowings/<fname>/<cname>")
-def findvenue(fname, cname):
-    findvenue="select cinema.cinemaname from filmcinema join cinema on filmcinema.cinemaid=cinema.id where filmcinema.filmid = (select film.id from film where film.film =  %s)"
-    cursor.execute(findvenue, (fname, cname))
+@app.route("/Filmshowings/<fname>/<event>")
+def findvenue(fname, event):
+    findvenue="select cinemaname from cinema "
+    cursor.execute(findvenue,)
     venue=cursor.fetchall()
-    return render_template("showtimes.html", location=venue )
+    return render_template("showtimes.html", location=venue, fname=fname, event=event )
 
 
 
