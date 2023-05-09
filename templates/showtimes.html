@@ -35,11 +35,11 @@
             <li class="nav-item">
               <a class="nav-link" href="/Filmshowings">Film Times</a>
             </li>
-            <form class="d-flex" role="search">
+          </ul>
+            <form class="d-flex ms-auto order-5 search" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-          </ul>
         </div>
       </div>
     </nav>
@@ -52,20 +52,21 @@
     <div class="container-fluid bg-1 text-center padding=20px">    
       <h4>Here are the Local Showtimes for Cambridge:</h4>
     </div>
+    <br>
 
     <center>
-    <table>
+    <table class="filmstable">
     
 {% for shows in show %}
         <tr>
-            <td> <a href="/Filmshowings/{{shows[0]}}"> {{shows[1]}} </a></td>
+            <td> <a class="linky" href="/Filmshowings/{{shows[0]}}"> {{shows[1]}} </a></td>
             
         </tr>
         
         {% endfor %}
     </table>
 
-    <table>
+    <table class="filmstable">
     
 {% for time in time%}
       <tr>
@@ -75,7 +76,7 @@
       {% endfor %}
   </table>
 
-  <table>
+  <table class="filmstable">
     
 {% for venue in location %}
     <tr>
@@ -84,6 +85,7 @@
     
       {% endfor %}
 </table>
+<br>
 
 
 <button onclick="history.back()">Go Back</button>
@@ -105,7 +107,7 @@
         <li class="nav-item"><a href="/Privacypolicy">Privacy Policy</a></li>
       </lr>
     </ul>
-    <p class="text-center text-body-secondary">&copy; 2023 Created by Bandwidth of Brothers!!</p>
+    <p class="text-center copy">&copy; 2023 Created by Bandwidth of Brothers!!</p>
   </footer>
 </div>
 

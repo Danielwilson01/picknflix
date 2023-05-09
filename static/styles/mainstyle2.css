@@ -14,6 +14,7 @@ body {
     background-color: #B72A33;
     border: 0;
     --bs-bg-opacity: 0;
+    text-indent: 10px;
 }
 
 .bg-body-tertiary {
@@ -60,6 +61,10 @@ body {
     max-height: 350px;
   }
 
+  
+  .search{
+    padding-right: 50px;
+  }
 
   .form-entry{
     display: inline-flex;  
@@ -68,6 +73,7 @@ body {
     align-self: center;
   }
 
+  .linky{text-decoration: none}
 
   .column{
      flex: 0 0 auto;
@@ -129,11 +135,22 @@ body {
   .footer {
     background-color: #B72A33;
     color: #D39F36;
-    text-shadow: #09090B 0px 0px 2px;
+    text-shadow: #000000 0px 0px 2px;
   }
 
   .footer li a {
     color: #D39F36;
-    text-shadow: #09090B 0px 0px 2px;
+    text-shadow: #000000 0px 0px 2px;
     text-decoration: none;
+  }
+
+  .results { font-size: xx-large; color: #D39F36; border: 0; --bs-bg-opacity: 0; }
+
+  .filmstable {
+    text-align: center;
+  }
+
+  .copy{
+    color:#000000;
+    text-shadow: yellow 0px 0px 1px;
   }
