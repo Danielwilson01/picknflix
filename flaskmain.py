@@ -17,6 +17,11 @@ i=0
 def Home_Page():
     return render_template("home.html")
 
+@app.route("/Index")
+def Index():
+    return render_template("index.html")
+
+
 @app.route("/Signup")
 def signup():
     return render_template("signup.html")
