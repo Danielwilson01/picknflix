@@ -38,6 +38,9 @@ def aboutus():
 def recommendations():
     return render_template("recommendations.html")
 
+@app.route("/Partners")
+def Partners():
+    return render_template("partners.html")
 
 @app.route("/Recommendations/Random")
 def randomfilm():
