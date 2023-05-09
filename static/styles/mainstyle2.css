@@ -126,4 +126,14 @@ body {
     transform: translateY(0);
   }
 
-  
+  .footer {
+    background-color: #B72A33;
+    color: #D39F36;
+    text-shadow: #09090B 0px 0px 2px;
+  }
+
+  .footer li a {
+    color: #D39F36;
+    text-shadow: #09090B 0px 0px 2px;
+    text-decoration: none;
+  }
