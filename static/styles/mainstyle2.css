@@ -87,8 +87,8 @@ body {
 
   .img__wrap {
     position: relative;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 250px;
+    max-width: 250px;
   
   }
   .img__description_layer {
@@ -126,4 +126,14 @@ body {
     transform: translateY(0);
   }
 
-  
+  .footer {
+    background-color: #B72A33;
+    color: #D39F36;
+    text-shadow: #09090B 0px 0px 2px;
+  }
+
+  .footer li a {
+    color: #D39F36;
+    text-shadow: #09090B 0px 0px 2px;
+    text-decoration: none;
+  }

@@ -64,7 +64,7 @@ def saverecord():
     db.commit()
     return redirect(url_for('Home_Page'))
 
-@app.route("/Filmshowings")
+@app.route("/Filmshowings/")
 def listfilms():
     findshowings="select * from film"
     cursor.execute(findshowings)
