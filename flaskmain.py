@@ -77,7 +77,7 @@ def listfilms():
 
 @app.route("/Filmshowings/<fname>")
 def findshowings(fname):
-    findshowings="select event.id, film.film, event.date, event.time from event join film where film.id=%s"
+    findshowings="select event.id, film.film, event.date, event.time from event join filmevent on event.id=filmevent.eventid join film on filmevent.filmid=film.id where filmevent.filmid=%s"
     cursor.execute(findshowings, (fname,))
     time=cursor.fetchall()
     return render_template("showtimes.html", time=time, fname=fname)
