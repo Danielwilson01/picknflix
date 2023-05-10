@@ -56,11 +56,16 @@
 
     <center>
     <table class="filmstable">
-    
+      <tr>
+      {% for header in headings %}
+        <th>{{ header }}</th>
+      {% endfor %}
+      </tr>
 {% for shows in show %}
         <tr>
             <td> <a class="linky" href="/Filmshowings/{{shows[0]}}"> {{shows[1]}} </a></td>
-            
+            <td>{{shows[2]}}</td>
+            <td> {{shows[3]}} </td>            
         </tr>
         
         {% endfor %}
@@ -70,20 +75,26 @@
     
 {% for time in time%}
       <tr>
-          <td> <a href="/Filmshowings/{{fname}}/{{time[0]}}">  {{time[1]}} {{time[2]}} </a></td>
+          <td> <a href="/Filmshowings/{{fname}}/{{time[0]}}">  {{time[1]}} </a></td>
+          <td>{{time[2]}} </td>
+          <td>{{time[3]}} </td>
       </tr>
       
       {% endfor %}
   </table>
 
-  <table class="filmstable">
-    
+<table class="filmstable">
+  <tr>
+    {% for header in heading %}
+      <th>{{ header}}</th>
+    {% endfor %}
+  </tr>
 {% for venue in location %}
-    <tr>
-        <td>  {{venue[0]}} </td>
-    </tr>
+  <tr>
+    <td>  {{venue[1]}} </td><td>  {{venue[2]}} </td><td>  {{venue[3]}} </td><td>  {{venue[4]}} </td>
+  </tr>
     
-      {% endfor %}
+{% endfor %}
 </table>
 <br>
 

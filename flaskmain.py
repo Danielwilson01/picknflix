@@ -69,25 +69,26 @@ def saverecord():
 
 @app.route("/Filmshowings/")
 def listfilms():
-    findshowings="select * from film"
+    headings=("Film", "Runtime", "Age Rating")
+    findshowings="select film.id, film, runtime, agerating.rating from film join agerating where agerating.id=film.agerating;"
     cursor.execute(findshowings)
     showings=cursor.fetchall()
-    return render_template("showtimes.html", show=showings)
+    return render_template("showtimes.html", headings=headings, show=showings)
 
 @app.route("/Filmshowings/<fname>")
 def findshowings(fname):
-    findshowings="select event.id, event.Date, event.Time from filmevent join event on filmevent.Eventid = event.id WHERE filmevent.filmid = %s"
+    findshowings="select event.id, film.film, event.date, event.time from event join film where film.id=%s"
     cursor.execute(findshowings, (fname,))
     time=cursor.fetchall()
     return render_template("showtimes.html", time=time, fname=fname)
 
 @app.route("/Filmshowings/<fname>/<event>")
 def findvenue(fname, event):
-    findvenue="select cinemaname from cinema "
-    cursor.execute(findvenue,)
-    venue=cursor.fetchall()
-    return render_template("showtimes.html", location=venue, fname=fname, event=event )
-
+    findvenue = "SELECT cinema.id, film, cinemaname, event.date, event.time FROM cinema JOIN film JOIN event ON film.id = film.id WHERE film.id = %s AND event.id = %s"
+    heading=("Film", "Venue", "Date", "Time")
+    cursor.execute(findvenue, (fname, event))
+    venue = cursor.fetchall()
+    return render_template("showtimes.html", location=venue, fname=fname, event=event, heading=heading)
 
 
 app.run(debug=True)   
